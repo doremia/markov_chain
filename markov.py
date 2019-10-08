@@ -52,12 +52,14 @@ def make_chains(text_string):
                 chains[bigram] = [value]
             else:
                 chains[bigram].append(value)
+    for key, value in chains.items():
+        print(key, value)
 
 
 
-    print(chains)
-    return sorted(key)
-print(make_chains(text_string))
+   
+#     return sorted(chains)
+# print(make_chains(text_string))
 
     # return chains
 
