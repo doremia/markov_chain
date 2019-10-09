@@ -68,16 +68,12 @@ def make_text(chains):
     first_value = list(chains.values())[0]
     random_value = choice(first_value)
     second_word_first_key = list(chains.keys())[0][1]
+    first_word_first_key = list(chains.keys())[0][0]
+    words.append(first_word_first_key)
     words.append(second_word_first_key)
     words.append(random_value)
     new_tuple = tuple(words[-2:])
-    #append second_word_first_key and appen random_value to words list
-    # create new key tuple with previous key and random value (slice last two words list)
-    # find index new key tuple in chains dict
-    # use new key to find next random value at index of new key
-    #append new random value 
-    # create new key tuple with last two indexes of words (old random value and new random value)
-    #repeat
+
     while True:
         if new_tuple in chains:
             words.append(choice(chains[new_tuple]))
